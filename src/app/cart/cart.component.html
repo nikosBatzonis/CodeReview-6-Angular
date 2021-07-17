@@ -1,0 +1,81 @@
+<h2 style="margin-top: 15vh; text-align: center; color: black">Reservation</h2>
+
+<!-- <div class="costs">
+    <div class="cart-item" *ngFor="let item of items">
+        <span>{{ item.destination }}:</span>
+        <span>{{ item.price }}€</span>
+    </div>
+</div>
+<div class="costs">
+    
+    <p>Total costs:</p>
+</div> -->
+<div class="row">
+    <div class="col-12 col-sm-10 offset-sm-1 col-lg-6 offset-lg-3 p-3">
+        <div class="col-6 d-flex justify-content-end"></div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-black fw-dark" scope="col">Product</th>
+                    <th class="text-black fw-dark" scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody class="cart-item" *ngFor="let item of items">
+                <tr>
+                    <th class="text-black fw-dark" scope="col">
+                        {{ item.destination }}
+                    </th>
+                    <td class="text-black fw-dark" scope="col">{{ item.price }}€</td>
+                </tr>
+            </tbody>
+            <span>Total Price: {{ sum }}€<br /></span>
+            <span>Price with: {{ pricePercent }} {{ percents }}€</span>
+        </table>
+    </div>
+</div>
+<div class="forms">
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)" style="width: 50%">
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">First Name</span>
+            <input id="fname" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" formControlName="fname" />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Last Name</span>
+            <input id="lname" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" formControlName="lname" />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Address</span>
+            <input id="address" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" formControlName="address" />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Phone Number</span
+      >
+      <input
+        id="tel"
+        type="text"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-sm"
+        formControlName="tel"
+      />
+    </div>
+    <div class="input-group input-group-sm mb-1">
+      <span class="input-group-text" id="inputGroup-sizing-sm"
+        >Email address</span
+      >
+      <input
+        id="email"
+        type="text"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-sm"
+        formControlName="email"
+      />
+    </div>
+    <div id="emailHelp" class="form-text mb-3" style="color: white">
+      We'll never share your email with anyone else.
+    </div>
+
+    <button class="btn btn-success button" type="submit">Purchase</button>
+  </form>
+</div>

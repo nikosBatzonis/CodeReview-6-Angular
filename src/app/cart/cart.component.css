@@ -1,0 +1,11 @@
+.forms {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+}
+
+.costs {
+    background: white;
+    width: 20%;
+    margin-left: 42%;
+}

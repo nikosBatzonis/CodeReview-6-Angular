@@ -1,0 +1,38 @@
+<h2 style="margin-top: 15vh; text-align: center; color: black">
+    Summer Travels
+</h2>
+
+<div class="container row">
+    <div class="
+      container-fluid
+      col-sm-10 col-md-6 col-lg-3
+      d-flex
+      justify-content-center
+    " style="margin-left: 5px" *ngFor="let detail of details; index as info">
+        <div class="bg-transparent" style="width: 18rem; margin-top: 3vh; margin-bottom: 2vh">
+            <div class="body">
+                <h5 class="card-title">
+                    {{ detail.destination }}
+                </h5>
+                <!-- <a routerLink="detail/{{ info }}">
+          {{ detail.destination }}
+        </a> -->
+                <img src="{{ detail.image }}" class="card-img-top" style="height: 200px; border-radius: 10px" alt="" />
+                <a class="card-title" routerLink="detail/{{ info }}"><i class="fas fa-exclamation-circle"> Check for {{ detail.det }} </i>
+        </a>
+
+                <!-- <h5 class="card-title">Destination:{{ detail.destination }}</h5>
+                <h5 class="card-title">Description:{{ detail.description }}</h5>
+                <h5 class="card-title">Start Date:{{ detail.startDate }}</h5>
+                <h5 class="card-title">Duration:{{ detail.duration }}</h5>
+                <h5 class="card-title">Price:{{ detail.price }}</h5> -->
+                <div class="button">
+                    <!-- <button class="btn btn-success" (click)="addToCart(detail)">
+            Add to Basket
+          </button> -->
+                    <i class="fas fa-cart-arrow-down fs-2 btn-success dtl" (click)="addToCart(detail)"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

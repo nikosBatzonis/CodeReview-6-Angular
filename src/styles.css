@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1505633738715-ebaa78bf4dd1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI3fHxpc2xhbmRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: Sans-serif;
+}
