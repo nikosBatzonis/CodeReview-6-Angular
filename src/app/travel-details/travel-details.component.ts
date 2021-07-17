@@ -18,21 +18,8 @@ export class TravelDetailsComponent implements OnInit {
   addToCart(detail: any) {
     window.alert('Your product has been added to the cart!');
     this.cartService.addToCart(detail);
-    //this.cartService.total(detail);
     console.log(detail);
   }
-
-  // totalCost() {
-  //   this.cartService.total();
-  // }
-  // total(detail: any) {
-  //   var total = 0;
-  //   detail.forEach((element: any) => {
-  //     total += element.price;
-  //     console.log(total);
-  //   });
-  //   return total;
-  // }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {

@@ -16,15 +16,6 @@ export class CartService {
     return this.items;
   }
 
-  // total(detail: any) {
-  //   var total = 0;
-  //   this.items.forEach((detail: any) => {
-  //     total += detail.price;
-  //     console.log(total);
-  //   });
-  //   return total;
-  // }
-
   clearCart() {
     this.items = [];
     return this.items;

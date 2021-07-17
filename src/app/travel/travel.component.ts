@@ -14,7 +14,6 @@ export class TravelComponent implements OnInit {
   addToCart(detail: any) {
     window.alert('Your product has been added to the cart!');
     this.cartService.addToCart(detail);
-    // this.cartService.total(detail);
   }
 
   ngOnInit(): void {}
