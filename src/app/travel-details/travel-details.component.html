@@ -9,5 +9,8 @@
     <h4>Start Date: {{ detail.startDate }}</h4>
     <p>Duration: {{ detail.duration }}</p>
     <p>Price: {{ detail.price }}€</p>
-    <i class="fab fa-amazon-pay fs-1 btn-success dtl" (click)="addToCart(detail)"></i>
+
+    <!-- Button with fontawesome but it not working in Mobile phones -->
+    <!-- <i class="fab fa-amazon-pay fs-1 btn-success dtl" (click)="addToCart(detail)"></i> -->
+    <button class="btn btn-success" (click)="addToCart(detail)">Buy Now</button>
 </div>
